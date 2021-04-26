@@ -25,12 +25,12 @@ export class CreateConnections1619184718080 implements MigrationInterface {
             type: "varchar",
           },
           {
-            name: "create_at",
+            name: "created_at",
             type: "timestap",
             default: "now()",
           },
           {
-            name: "update_at",
+            name: "updated_at",
             type: "timestap",
             default: "now()",
           },
@@ -51,7 +51,7 @@ export class CreateConnections1619184718080 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey("connections", "FKConnectionUser");
+    // await queryRunner.dropForeignKey("connections", "FKConnectionUser");
     await queryRunner.dropTable("connections");
   }
 }

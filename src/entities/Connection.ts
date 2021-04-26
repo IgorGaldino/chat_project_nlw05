@@ -30,10 +30,10 @@ class Connection {
   user_id: string;
 
   @CreateDateColumn()
-  create_at: Date;
+  created_at: Date;
 
   @UpdateDateColumn()
-  update_at: Date;
+  updated_at: Date;
 
   constructor() {
     if (!this.id) {
